@@ -1,0 +1,97 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container bg-light" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-center" style="color:#ff7e17">GETTING STARTED</h1>
+      <br>
+      <h3 class=" text-center">From navigating the TA process to enrolling in college.</h3>
+      <br>
+      <p class="container text-left" >(Disclaimer: The following are not all inclusive instructions for every navy command and their local instructions take precedent over any information presented here)</p>
+      <br>
+      <p class="container text-justify"> Navigating the TA process and completing all of the steps to enroll in college to start your journey through higher education can be intimidating. Hopefully this consolidated list of instructions, links, and accompanying checklist can assist you in getting through the process.</p>
+      <br>
+      <p class="container text-left">First stop in your journey should be the Navy College website (<a href="https://www.navycollege.navy.mil/">https://www.navycollege.navy.mil/</a>). </p>
+      <p class="container text-left">A site you should become intimately familiar with is the MyNavy Education website (<a style="word-wrap:break-word" href="https://myeducation.netc.navy.mil/webta/home.html#nbb">https://myeducation.netc.navy.mil/webta/home.html#nbb</a>). This site requires login with either DEERS account information or a CAC. This page shows you your eligibility for TA, as well as being the site you use to submit your electronic TA requests and receive your approved TA vouchers.</p>
+      <p class="container text-left">Obtaining your Joint Services Transcript (JST) is relatively simple. Head to the site (<a href="https://jst.doded.mil/jst/">https://jst.doded.mil/jst/</a>), log in and get an electronic copy of your unofficial transcript. If your school requests an official transcript be sent, you can also conduct that transaction here </p>
+      <p class="container text-left">If you have CLEP, AP, DSST, SAT, or ACT scores you need to submit, you can access those from the College Board (<a href="https://www.collegeboard.org/">https://www.collegeboard.org/</a>). If you are interested in taking CLEP or DSST examinations, those are discussed more in depth in the <a href="{{ url_for('alt_credits') }}">Alternative College Credit</a> section of this website.
+      <!-- TA Checklist -->
+      <p class="container text-left">
+        <table class="table text-left">
+          <thead>
+            <col width="5px">
+              <col width="350px%">
+                <tr>
+                  <th scope="col" colspan="2" >Complete Once During your Navy Career:</th>
+                </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><input id = "checkBox1" type="checkbox" name="cb1" /></th>
+              <td>TA/NCPACE DL Policy and Procedures Training.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox2" type="checkbox" name="cb2" /></th>
+              <td>Navy Virtual Counseling 101 training IMI.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox3" type="checkbox" name="cb3" /></th>
+              <td>Schedule 1st virtual counseling with NCVEC.</td>
+          </tr>
+          <tr>
+            <th scope="col" colspan="2">Selecting a College and Degree Plan:</th>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox4" type="checkbox" name="cb4" /></th>
+              <td>Select multiple colleges you are interested in.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox5" type="checkbox" name="cb5" /></th>
+            <td>Select multiple degree plans from all chosen colleges.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox6" type="checkbox" name="cb6" /></th>
+            <td>E-Mail advisors from selected schools. Tell them which degree plans you are interested in.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox7" type="checkbox" name="cb7" /></th>
+            <td>Send your JST and any other transcripts you have to your advisors for evaluation.</td>
+          </tr>
+          <tr>
+            <th scope="col" colspan="2">Next Steps:</th>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox8" type="checkbox" name="cb8" /></th>
+            <td>Schedule second counseling with NCVEC to review degree plan.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox9" type="checkbox" name="cb9" /></th>
+            <td>Enroll with chosen school.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox10" type="checkbox" name="cb10" /></th>
+            <td>Register for classes.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox11" type="checkbox" name="cb11" /></th>
+            <td>Route TA request at least 14 days before class start date.</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox12" type="checkbox" name="cb12" /></th>
+            <td>Sign NCVEC approved voucher</td>
+          </tr>
+          <tr>
+            <th scope="row"><input id="checkBox13" type="checkbox" name="cb13" /></th>
+            <td>Submit approved and signed TA voucher through your school's process</td>
+          </tr>
+          <tr>
+            <th scope="col" colspan="2">START CLASSES!</th>
+          </tr>
+      </tbody>
+  </table>
+  <script>function uncheckAll() {
+  $('input[type="checkbox"]').prop('checked', false)
+}
+</script>
+  <button class="btn btn-dark float-left" type ="button" onclick="uncheckAll()">Uncheck all</button>
+<br>
+{% endblock %}
