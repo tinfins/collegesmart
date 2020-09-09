@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container bg-light" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-center" style="color:#ff7e17">ONLINE COLLEGES</h1>
+      <br>
+      <h3 class=" text-center">A list of online colleges and links to research and contact them to begin your journey.</h3>
+      <br>
+      <p class="container text-left" >(Disclaimer: The following are NOT endorsed by this site, the DoD, or the U. S. Navy. This is a small list to get started in deciding where you should attend college)</p>
+      <br>
+      {% for i in colleges %}
+      <div class="container clearfix" >
+          <a href={{ i.url }} target="_blank"><img class="logo float-left" src={{ i.logo }}></a>
+      </div>
+      <p>
+      <div class="container text-left"><h3>{{ i.name }}</h3></div>
+      <p class="container text-left">{{ i.description }}</p>
+      <p class="container text-left">Accreditation: {{ i.accreditation }}</p>
+      <p class="container text-left"><a href={{ i.url }} target="_blank">{{ i.name }} Home Page</a></p>
+      <p class="container text-left"><a href={{ i.degree_plans }} target="_blank">Degree Plans</a></p>
+      <p class="container text-left"><a href={{ i.advisors }} target="_blank">Admissions</a></p>
+      </p>
+      <br>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

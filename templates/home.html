@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block content %}
+<!-- Header -->
+  <header class="container bg-light float-center" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-center" style="color:#ff7e17">GETTING STARTED</h1>
+      <br>
+      <p>Navigate your way through the Navy Tuition Assisstance process</p>
+      <a href="{{ url_for('getting_started') }}" class="btn btn-dark float-center" role="button">Get Started</a>
+    </div>
+  </header>
+
+<!-- First Grid -->
+  <div class="container bg-white float-center" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-left" style="color:#ff7e17">College Credit Alternatives</h1>
+      <br>
+      <p class="container text-left">Learn about alternative ways to get college credit. Credit-by-examination, accredited online short courses, and study guides, along with other information.</p>
+      <a href="{{ url_for('alt_credits') }}" class="btn btn-dark float-center" role="button">Credit Alternatives</a>
+    </div>
+  </div>
+<!-- Second Grid -->
+  <div class="container bg-light float-center" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-left" style="color:#ff7e17">Online Colleges</h1>
+      <br>
+      <p class="container text-left">Learn about many online colleges that accept TA. Read brief descriptions about schools, learn of different degree paths. Links to contact advisors for specific schools.</p>
+      <a href="{{ url_for('online_colleges') }}" class="btn btn-dark float-center" role="button">Online Colleges</a>
+    </div>
+  </div>
+{% endblock %}

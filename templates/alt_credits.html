@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container bg-light" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-center" style="color:#ff7e17">ALTERNATIVE WAYS TO EARN COLLEGE CREDIT</h1>
+      <br>
+      <h3 class=" text-center">A list of ways to earn alternative college credits and links to help jumpstart your educational career.</h3>
+      <br>
+      <p class="container text-left" >(Disclaimer: The following are NOT endorsed by this site, the DoD, or the U. S. Navy. This is a small list to get started in deciding where you should attend college)</p>
+      <br>
+      <p class="container text-left">Not all schools accept alternative credits. Some accept all, some accept only one or two methods, some accept none. Please check with your advisors to ensure your school accepts credits from these programs before completing them.
+<br><br>
+CLEP and DSST exams are free for military members for the first examination per subject.
+<br>
+<a href="https://clep.collegeboard.org/pdf/clep-dantes-eligibility-chart.pdf" target="_blank">Military Funding Eligibility</a>
+      <br>
+      <br>
+      {% for i in alt_credits %}
+      <div class="container clearfix" >
+          <a href={{ i.url }} target="_blank"><img class="logo float-left" src={{ i.logo }}></a>
+      </div>
+      <p>
+      <div class="container text-left"><h3>{{ i.name }}</h3></div>
+      {% autoescape false %}
+      <p class="container text-left">{{ i.description }}</p>
+      {% endautoescape %}
+      <p class="container text-left"><a href={{ i.url }} target="_blank">{{ i.name }} Home Page</a></p>
+      <br>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

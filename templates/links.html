@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container bg-light" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-center" style="color:#ff7e17">HELPFUL LINKS</h1>
+      <br>
+      <h3 class=" text-center">A consolidated list of helpful links to assist you.</h3>
+      <br>
+      <p class="container text-left" >(Disclaimer: The following are NOT endorsed by this site, the DoD, or the U. S. Navy. This is a small list to get started in deciding where you should attend college)</p>
+      <br>
+      <br>
+      <p class="container text-left">This website is geared towards US NAVY members getting started on their journey towards a college degree. The following is a collection of links that you might find helpful in your quest.
+      <br>
+      <br>
+      {% for i in links %}
+      </div>
+      <div class="container clearfix" >
+          <h5><a href={{ i.url }} target="_blank">{{ i.name }}</a></h5>
+          <p class="container text-left">{{ i.description }}</p>
+      <br>
+      {% endfor %}
+    </div>
+    <br>
+    <br>
+    <div class="col container-fluid text-center">
+      <a class="twitter-timeline" data-width="600" data-height="600" href="https://twitter.com/Taylor_Clemons/lists/miledu?ref_src=twsrc%5Etfw">A Twitter List relating to military educational opportunities</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+{% endblock %}
