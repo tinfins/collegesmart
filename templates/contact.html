@@ -1,4 +1,29 @@
 {% extends 'index.html' %}
 {% block content %}
-
+<div class="container bg-light" style="padding:80px 20px">
+    <div class="col container text-center">
+      <h1 class="text-center" style="color:#ff7e17">CONTACT</h1>
+      <br>
+      <h3 class=" text-center">Contact the webmaster for questions, comments, concerns, etc.</h3>
+      <br>
+      <p class="container text-left" >(Disclaimer: The following are NOT endorsed by this site, the DoD, or the U. S. Navy. This is a small list to get started in deciding where you should attend college)</p>
+      <br>
+      <br>
+      <p class="container text-left">This website is geared towards US NAVY members getting started on their journey towards a college degree. The following are ways to contact the owner of this site. If you have changes, spot broken links, or just want to say thank you, follow the links. Feedback is always welcome.
+      <br>
+      <br>
+      {% for i in contact %}
+      </div>
+      <div class="container clearfix" >
+          <h5><a href={{ i.url }} target="_blank">{{ i.name }}</a></h5>
+          {% autoescape false}
+          <p class="container text-left">{{ i.description }}</p>
+          {% endautoescape %}
+      <br>
+      {% endfor %}
+    </div>
+    <br>
+    <br>    
+    </div>
+  </div>
 {% endblock %}

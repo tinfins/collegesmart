@@ -14,7 +14,9 @@
       </div>
       <p>
       <div class="container text-left"><h3>{{ i.name }}</h3></div>
+      {% autoescape false %}
       <p class="container text-left">{{ i.description }}</p>
+      {% endautoescape %}
       <p class="container text-left">Accreditation: {{ i.accreditation }}</p>
       <p class="container text-left"><a href={{ i.url }} target="_blank">{{ i.name }} Home Page</a></p>
       <p class="container text-left"><a href={{ i.degree_plans }} target="_blank">Degree Plans</a></p>

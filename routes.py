@@ -48,7 +48,9 @@ def links():
 
 @app.route('/contact')
 def contact():
-    return render_template('/contact.html',title='collegeSMART - Contact')
+    """ Route for contacts page. Uses json to generate page body """
+    contact_list = tasks.json_list(os.path.join(pathlib.Path(__file__).parent.absolute(),'static/contact.json'))
+    return render_template('/contact.html',title='collegeSMART - Contact',contact=contact_list)
     
 if __name__ == "__main__":
     app.run(debug=True)
